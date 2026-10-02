@@ -1,0 +1,10 @@
+{
+  "claim_id": "CLM-a1b2c3d400112233",
+  "event_id": "EVT-b20f7c01",
+  "farmer_id": "FRM-00a1b2c3",
+  "policy_id": "POL-aa010001",
+  "tier": "tier_2",
+  "payout_amount_inr": 30000,
+  "sum_insured_inr": 50000,
+  "payout_percent": 60
+}

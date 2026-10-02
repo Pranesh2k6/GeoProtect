@@ -1,0 +1,6 @@
+{
+  "success": false,
+  "event_id": "EVT-b20f7c01",
+  "reason_code": "data_missing",
+  "message": "Gauge data not available for the requested date."
+}

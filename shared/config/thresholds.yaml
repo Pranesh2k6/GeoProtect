@@ -1,0 +1,50 @@
+# GeoProtect Trigger Thresholds Configuration
+# All three signals (rainfall, gauge, satellite) must be met for a tier.
+# Source references are in comments; see docs/research-notes.md for details.
+
+h3_resolution: 8  # ~0.74 km² per cell; see research-notes.md §3
+
+tiers:
+  tier_1:
+    label: "Moderate Flood"
+    payout_percent: 25  # Inspired by RWBCIS term sheet practices (A12)
+    triggers:
+      rainfall_mm_min: 115.6  # IMD "Very Heavy Rainfall" threshold (imd.gov.in)
+      gauge_above: "warning_level"  # CWC "Above Normal" (cwc.gov.in)
+      inundation_pct_min: 10  # Minimum satellite-confirmed flood fraction
+
+  tier_2:
+    label: "Major Flood"
+    payout_percent: 60  # Inspired by RWBCIS term sheet practices (A12)
+    triggers:
+      rainfall_mm_min: 204.5  # IMD "Extremely Heavy Rainfall" threshold (imd.gov.in)
+      gauge_above: "danger_level"  # CWC "Severe" (cwc.gov.in)
+      inundation_pct_min: 30  # Satellite-confirmed flood fraction
+
+  tier_3:
+    label: "Catastrophic Flood"
+    payout_percent: 100  # Full sum insured
+    triggers:
+      rainfall_mm_min: 204.5  # IMD "Extremely Heavy Rainfall" threshold (imd.gov.in)
+      gauge_above: "highest_flood_level"  # CWC "Extreme" (cwc.gov.in)
+      inundation_pct_min: 60  # Satellite-confirmed flood fraction
+
+# IMD official rainfall classification (mm / 24 h ending 08:30 IST)
+# Source: imd.gov.in, accessed 2026-10-02
+imd_rainfall_classes:
+  very_light: { min: 0.0, max: 2.4 }
+  light: { min: 2.5, max: 15.5 }
+  moderate: { min: 15.6, max: 64.4 }
+  heavy: { min: 64.5, max: 115.5 }
+  very_heavy: { min: 115.6, max: 204.4 }
+  extremely_heavy: { min: 204.5, max: 999999 }
+
+# Demo scenario gauge levels for Basua station, Kosi river, Bihar
+# Source: CWC/WRD Bihar for danger_level; others are ASSUMPTION (see assumptions.md)
+demo_gauge:
+  station_name: "Basua"
+  river: "Kosi"
+  state: "Bihar"
+  warning_level_m: 46.50   # ASSUMPTION (A11)
+  danger_level_m: 47.75    # CWC/WRD Bihar (confirmed)
+  highest_flood_level_m: 49.24  # VERIFIED (secondary): recorded 2017, CWC/WRD Bihar data via befiqr.in

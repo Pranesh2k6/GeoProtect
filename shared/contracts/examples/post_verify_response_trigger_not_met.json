@@ -1,0 +1,6 @@
+{
+  "success": false,
+  "event_id": "EVT-b20f7c01",
+  "reason_code": "trigger_not_met",
+  "message": "Flood signals did not meet tier_1 thresholds: rainfall 100 mm < 115.6 mm required."
+}

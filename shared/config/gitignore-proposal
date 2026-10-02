@@ -1,0 +1,49 @@
+# GeoProtect .gitignore proposal
+# Copy this file to the repo root as .gitignore
+
+# --- Environment ---
+.env
+*.env.local
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+
+# --- Node / React ---
+node_modules/
+.next/
+out/
+build/
+
+# --- Go ---
+/vendor/
+*.exe
+
+# --- IDE ---
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# --- Testing ---
+coverage/
+htmlcov/
+.coverage
+*.lcov
+
+# --- Generated data (regenerate with generate_dataset.py) ---
+# Do NOT gitignore shared/sample-data/ — it is committed.
+
+# --- Secrets ---
+*.pem
+*.key
+*.crt
+google-services.json
+GoogleService-Info.plist

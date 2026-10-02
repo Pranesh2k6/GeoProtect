@@ -1,0 +1,5 @@
+{
+  "success": false,
+  "reason_code": "validation_error",
+  "message": "event_id does not match required format ^EVT-[0-9a-f]{8}$."
+}

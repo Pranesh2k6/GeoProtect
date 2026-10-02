@@ -1,0 +1,23 @@
+{
+  "success": true,
+  "event_id": "EVT-b20f7c01",
+  "rainfall_mm": 230,
+  "rainfall_class": "extremely_heavy",
+  "gauge_station": "Basua",
+  "gauge_level_m": 48.50,
+  "warning_level_m": 46.50,
+  "danger_level_m": 47.75,
+  "highest_flood_level_m": 49.24,
+  "inundation_pct": 45,
+  "confidence": 0.92,
+  "tier": "tier_2",
+  "verified_at": "2020-07-26T04:30:00Z",
+  "data_provenance": {
+    "rainfall_mm": "demo_exaggerated",
+    "gauge_level_m": "demo_calibrated",
+    "inundation_pct": "demo_calibrated",
+    "danger_level_m": "verified_secondary",
+    "highest_flood_level_m": "verified_secondary",
+    "warning_level_m": "unverified"
+  }
+}

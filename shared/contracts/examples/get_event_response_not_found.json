@@ -1,0 +1,5 @@
+{
+  "success": false,
+  "reason_code": "not_found",
+  "message": "Event EVT-00000000 does not exist."
+}

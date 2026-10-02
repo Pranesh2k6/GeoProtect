@@ -1,0 +1,55 @@
+{
+  "event_id": "EVT-b20f7c01",
+  "event_date": "2020-07-26T00:00:00Z",
+  "region_name": "Basantpur block, Supaul",
+  "h3_resolution": 8,
+  "affected_h3_cells": [
+    "883c1ea285fffff",
+    "883c1ea28dfffff",
+    "883c1ea2a9fffff",
+    "883c1ea2e1fffff",
+    "883c1ea2e3fffff",
+    "883c1ea2e7fffff",
+    "883c1ea2ebfffff",
+    "883c1ea05bfffff",
+    "883c1ea281fffff",
+    "883c1ea287fffff"
+  ],
+  "tier": "tier_2",
+  "payout_percent": 60,
+  "sum_insured_inr": 50000,
+  "payout_per_farmer_inr": 30000,
+  "affected_farmer_count": 12,
+  "total_payout_inr": 360000,
+  "data_provenance": {
+    "rainfall_mm": "demo_exaggerated",
+    "gauge_level_m": "demo_calibrated",
+    "inundation_pct": "demo_calibrated",
+    "danger_level_m": "verified_secondary",
+    "highest_flood_level_m": "verified_secondary",
+    "warning_level_m": "unverified"
+  },
+  "prepared_files": [
+    {
+      "filename": "rainfall_evt_b20f7c01.json",
+      "format": "JSON",
+      "description": "24 h rainfall data for the event",
+      "owner": "Member 2",
+      "status": "pending"
+    },
+    {
+      "filename": "gauge_evt_b20f7c01.json",
+      "format": "JSON",
+      "description": "Basua gauge reading and warning/danger/HFL levels",
+      "owner": "Member 2",
+      "status": "pending"
+    },
+    {
+      "filename": "flood_extent_evt_b20f7c01.geojson",
+      "format": "GeoJSON",
+      "description": "Sentinel-1 derived flood polygon with metadata",
+      "owner": "Member 2",
+      "status": "pending"
+    }
+  ]
+}

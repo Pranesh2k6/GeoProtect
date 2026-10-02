@@ -1,0 +1,5 @@
+{
+  "success": false,
+  "reason_code": "service_unavailable",
+  "message": "Payment rail timeout."
+}

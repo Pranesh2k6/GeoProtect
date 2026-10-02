@@ -1,0 +1,16 @@
+farmer_id,h3_cell,policy_id,policy_status,edge_type,expected_result
+FRM-00d1e2f9,883c1ea2e3fffff,POL-bb020001,inactive,inactive_policy_in_affected_cell,Rejected: policy_inactive
+FRM-00d1e2fa,883c1ea2e7fffff,POL-bb020002,inactive,inactive_policy_in_affected_cell,Rejected: policy_inactive
+FRM-00d1e2fb,883c1ea2e1fffff,POL-bb020003,expired,expired_policy_in_affected_cell,Rejected: policy_expired
+FRM-00d1e2fc,883c1ea285fffff,POL-bb020004,expired,expired_policy_in_affected_cell,Rejected: policy_expired
+FRM-00a1b2c3,883c1ea2e3fffff,POL-aa010001,active,duplicate_claim_attempt,Return existing claim with duplicate=true
+FRM-00d1e2f1,883c1ea051fffff,POL-cc030001,active,active_policy_outside_affected_cells,Rejected: farmer_outside_cells
+FRM-00d1e2f2,883c1ea053fffff,POL-cc030002,active,active_policy_outside_affected_cells,Rejected: farmer_outside_cells
+FRM-00d1e2f3,883c1ea059fffff,POL-cc030003,active,active_policy_outside_affected_cells,Rejected: farmer_outside_cells
+FRM-00d1e2f4,883c1ea213fffff,POL-cc030004,active,active_policy_outside_affected_cells,Rejected: farmer_outside_cells
+FRM-00d1e2f5,883c1ea217fffff,POL-cc030005,active,active_policy_outside_affected_cells,Rejected: farmer_outside_cells
+FRM-00d1e2f6,883c1ea233fffff,POL-cc030006,active,active_policy_outside_affected_cells,Rejected: farmer_outside_cells
+FRM-00d1e2f7,883c1ea23bfffff,POL-cc030007,active,active_policy_outside_affected_cells,Rejected: farmer_outside_cells
+FRM-00d1e2f8,883c1ea283fffff,POL-cc030008,active,active_policy_outside_affected_cells,Rejected: farmer_outside_cells
+FRM-00a1b2c5,883c1ea2e1fffff,POL-ee050001,active,farmer_with_two_policies,"Approved: one claim per policy, payout based on each policy's sum_insured"
+FRM-00ff0001,883c1ea283fffff,POL-ff060001,active,different_sum_insured_outside_cells,Rejected: farmer_outside_cells (sum_insured=35000 is irrelevant)
